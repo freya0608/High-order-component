@@ -21,21 +21,24 @@ import React, {Component} from 'react';
 // }
 
 export default (title)=>WrappedComponent => class A extends Component {
-        render() {
-            const {age,...other} = this.props;
-            return (
-                <div className="a-container">
-                    <div className="header">
-                        <div>{title}</div>
-                        <div>X</div>
-                    </div>
-                    <div>
-                        这是内容部分
-                        <WrappedComponent sex={'男'} {...other} />
-                    </div>
+    refc(instance){
+        instance.getName&&alert(instance.getName());
+    }
+    render() {
+        const {age,...other} = this.props;
+        return (
+            <div className="a-container">
+                <div className="header">
+                    <div>{title}</div>
+                    <div>X</div>
                 </div>
-            );
-        }
+                <div>
+                    这是内容部分
+                    <WrappedComponent sex={'男'} {...other} ref={this.refc.bind(this)}/>
+                </div>
+            </div>
+        );
+    }
 }
 
 

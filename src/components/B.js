@@ -31,9 +31,21 @@ import React, {Component} from 'react';
 
 
 class B extends Component {
+     constructor(props){
+         super(props);
+         this.state = {
+             value:'';
+         }
+     }
+     changeInput(e){
+         this.setState({
+             value:e.target.value,
+         });
+     }
     render() {
         return (
             <div>
+                <input type="text" value={this.state.value} onInput={this.changeInput.bind(this)}/>
                 我的名字叫：{this.props.name}
                 <br/>
                 我的年龄是：{this.props.age}
