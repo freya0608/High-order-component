@@ -1,0 +1,19 @@
+.tabbar{
+    height: 50px;
+    position: fixed;
+    bottom:0;
+    width:100%;
+    padding: 5px 0;
+    border:1px solid rgba(204,204,204,0.43)
+}
+.tabbar-content{
+    display:flex;
+}
+.tabbar-item{
+    flex:1;        /*每个元素均分的*/
+}
+.active{
+    color: red;
+}
+
+
