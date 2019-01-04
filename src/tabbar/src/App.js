@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import Tabbar from './components/tabbar/index';
+import Tabbar from './components/Tabbar';
+import RouterMap from './router'
 import './static/iconfont.css'
 import './App.css';
+
 class App extends Component {
     render() {
         return (
             <div className="App">
-                <Tabbar/>
+                <RouterMap/>
                 {/*<div className="iconfont icon-home"></div>*/}
 
             </div>
